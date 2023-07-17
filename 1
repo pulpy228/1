@@ -1,0 +1,9 @@
+from itertools import *
+k=0
+for i in product('АИМРЭ', repeat=5):
+  s=''.join(i)
+  k+=1
+  s=s.replace('Р', 'М')
+  if s.count('М')>=2:
+    print(k)
+    break
